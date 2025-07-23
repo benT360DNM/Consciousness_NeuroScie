@@ -1,13 +1,18 @@
-# ignore raw_data folder contents (you can still add new subjects there if desired)
+# BIDS raw data
 raw_data/
 
-# ignore all NIfTI outputs
-*.nii
-*.nii.gz
+# BIDS derivatives (we version‐control these)
+# derivatives/
 
-# ignore large JSONs
-*.json
+# Ignore any large caches or scratch files:
+__pycache__/
+*.py[cod]
+*.log
 
-# ignore intermediate CSVs (keep only the summaries)
-!vlsm_clusters_summary.csv
-!*summary.csv
+# Keep only summary CSVs, ignore big intermediates
+!derivatives/**/vlsm_clusters_summary.csv
+!derivatives/**/ag_overlap_summary.csv
+
+# Everything else in derivatives is OK to track,
+# but you can selectively ignore NIFTIs if you want:
+# derivatives/**/*.nii.gz
