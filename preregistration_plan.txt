@@ -1,0 +1,31 @@
+Pre-registration — Angular Gyrus Lesion Study  (ds004889)
+
+DATA FILES INCLUDED
+  • ag_overlap_summary.csv
+  • lesion_volumes.csv
+  • participants_lesion_merged.csv
+  • bootstrap_results.json   (Cohen’s d results)
+
+PRIMARY THRESHOLD
+  • AG-positive =       ag_voxels ≥ 50
+  • Controls     =       ag_voxels = 0
+    (n_ag = 746, n_ctrl = 1043)
+
+SENSITIVITY THRESHOLD
+  • ag_voxels ≥ 100  (to be repeated)
+
+OUTCOME VARIABLE
+  • NIHSS score  (column: “nihss”)
+
+STATISTICAL PLAN
+  • Effect size: Cohen’s d, bootstrapped (10 000 resamples, seed 42)
+  • 95 % CI: percentile method
+  • Result obtained: d ≈ 0.586  (95 % CI 0.49–0.69)
+
+COVARIATES FOR REGRESSION / VLSM
+  • Age, Sex, Total lesion volume
+
+NEXT STEPS
+  1. Upload this ZIP + plan to OSF (time-stamped prereg).
+  2. Run voxel-wise lesion–symptom mapping (Nilearn, n_jobs = -1).
+  3. Draft manuscript § 3.4 with bootstrap numbers.

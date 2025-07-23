@@ -1,0 +1,13 @@
+# ignore raw_data folder contents (you can still add new subjects there if desired)
+raw_data/
+
+# ignore all NIfTI outputs
+*.nii
+*.nii.gz
+
+# ignore large JSONs
+*.json
+
+# ignore intermediate CSVs (keep only the summaries)
+!vlsm_clusters_summary.csv
+!*summary.csv
